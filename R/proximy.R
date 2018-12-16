@@ -1,6 +1,6 @@
 
 
-rela <- function(mat) {
+proximy <- function(mat) {
 
 
 
