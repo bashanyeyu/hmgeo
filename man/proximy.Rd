@@ -1,12 +1,12 @@
-\name{hello}
-\alias{hello}
-\title{Hello, World!}
+\name{proximy}
+\alias{proximy}
+\title{compute the proximy!}
 \usage{
-hello()
+proximy(x)
 }
 \description{
-Prints 'Hello, world!'.
+you will get a matrix abount proximy of the cities 
 }
 \examples{
-hello()
+proximy(x)
 }
