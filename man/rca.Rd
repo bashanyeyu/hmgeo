@@ -1,10 +1,10 @@
 \name{rca}
 \alias{rca}
 \title{
-revealed comparative advantage,区位熵
+revealed comparative advantage,locational enproty
 }
 \description{
-revealed comparative advantage,区位熵
+revealed comparative advantage,locational enproty
 (C. A. Hidalgo,2007)
 }
 \usage{
