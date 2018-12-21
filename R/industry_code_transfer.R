@@ -2,7 +2,7 @@
 # 确保具有02标准的所有四位产业代码！
 # please be sure there are ALL the four digits codes of GB/02
 
-industry_code_transfer = function(x){
+industry_code_transfer <- function(x){
 sw=x
 sw$aa1310=sw$a1310
 sw$aa1320=sw$a1320+sw$a1352/2
