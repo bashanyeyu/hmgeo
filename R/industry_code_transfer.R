@@ -1,16 +1,9 @@
 
-<<<<<<< HEAD
-
-
-industry_code_transfer=function(x){
-  # 确保具有02标准的所有四位产业代码！
-  # please be sure there are ALL the four digits codes of GB/02
-=======
 # 确保具有02标准的所有四位产业代码！
 # please be sure there are ALL the four digits codes of GB/02
 
 industry_code_transfer <- function(x){
->>>>>>> f38980579eb743505ac8e3a7149d39e4013aec77
+
 sw=x
 sw$aa1310=sw$a1310
 sw$aa1320=sw$a1320+sw$a1352/2

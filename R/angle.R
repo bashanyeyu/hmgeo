@@ -5,5 +5,3 @@ angle=function(x,y){
   return( acos(numerator/denominator))
 
 }
-
-angle(xx,yy)
