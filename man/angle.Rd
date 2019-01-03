@@ -2,7 +2,7 @@
 \alias{angle}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Angle between vectors in radian
 }
 \description{
 Angle between vectors in radian
