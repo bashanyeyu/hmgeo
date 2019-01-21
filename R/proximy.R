@@ -1,32 +1,33 @@
-proximy <- function(mat) {
+proximy <- function(ridata) {
 
 ###Just for proximy!!NOT density!
-# location in rows and industies in cloumns 
-#need the cities not provinces
+# location in rows and industies in cloumns
 #in case of the error about "as.numic", add "/1"
-mat=as.matrix(mat)
-rca_mat=RCA(mat/1,binary = T)
+ridata=as.ridatarix(ridata)
+rca_ridata=RCA(ridata/1,binary = T)
 
 ####the key process!
-rel_mat=t(rca_mat)%*%rca_mat
+rel_ridata=t(rca_ridata)%*%rca_ridata
 
 #the conditional probabilities
-rela_mat=rel_mat/apply(rel_mat,2,max)
-rela_mat[is.nan(rela_mat)]=0
+rela_ridata=rel_ridata/apply(rel_ridata,2,max) #seclet the max num in each col
+rela_ridata[is.nan(rela_ridata)]=0
 
-#min()
-n=ncol(rela_mat)
+#mini value ofconditional probabilities about a-b b-a
+n=ncol(rela_ridata)
 for(i in 1:n){
+
   for(j in 1:n){
-    if (rela_mat[i,j]>rela_mat[j,i]){
-      rela_mat[i,j]=rela_mat[j,i]
+    if (rela_ridata[i,j]>rela_ridata[j,i]){
+      rela_ridata[i,j]=rela_ridata[j,i]
     }else{
-      rela_mat[j,i]=rela_mat[i,j]}
+      rela_ridata[j,i]=rela_ridata[i,j]}
   }
+
 }
 
 
-rela_mat[is.nan(rela_mat)]=0
-rela_mat=as.data.frame(rela_mat)
+rela_ridata[is.nan(rela_ridata)]=0
+rela_ridata=as.data.frame(rela_ridata)
 
 }
