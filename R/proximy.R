@@ -4,8 +4,8 @@ proximy.m <- function(ridata) {
 # location in rows and industies in cloumns
 #in case of the error about "as.numic", add "/1"
 
-ridata=as.ridatarix(ridata)
-rca_ridata=RCA(ridata/1,binary = T)
+ridata=as.data.frame(ridata)
+rca_ridata=RCA(ridata[-1,-1]/1,binary = T)
 
 
 ####the key process!
@@ -38,6 +38,7 @@ rela_ridata=as.data.frame(rela_ridata)
 proximy=function(ridata,location='r'){
   if(location=='r'){
     result=proximy.m(ridata)
+
   }else{
 
     if(location=='c'){
@@ -47,7 +48,7 @@ proximy=function(ridata,location='r'){
       print("location should be 'r'(in rows) or 'c'(in cols)")
     }
   }
-
-
+  result
 }
+
 
