@@ -1,7 +1,7 @@
 Package: hmgeo
 Type: Package
 Title: some tools for human(or economy) geogryphy study
-Version: 0.1.0
+Version: 0.1.1
 Author: Chang`an Liang
 Maintainer: Chang`an Liang <changan_l@outlook.com>
 Description: some tools for human(or economy) geogryphy study
