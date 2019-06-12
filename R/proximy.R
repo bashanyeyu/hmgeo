@@ -35,7 +35,7 @@ rela_ridata=as.data.frame(rela_ridata)
 
 }
 
-proximy=function(ridata,location=r){
+proximy=function(ridata,location='r'){
   if(location=='r'){
     result=proximy.m(ridata)
   }else{
