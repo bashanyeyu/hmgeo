@@ -1,3 +1,4 @@
+warning('any weird could be sent to changan_L@vip.163.com')
 proximy.m <- function(ridata) {
 
 ###Just for proximy!!NOT density!
@@ -45,10 +46,8 @@ proximy=function(ridata,location='r'){
       ridata=t(ridata)
       result=proximy.m(ridata)
     }else{
-      print("location should be 'r'(in rows) or 'c'(in cols)")
+     warning("location should be 'r'(in rows) or 'c'(in cols)")
     }
   }
-  result
 }
-
 
