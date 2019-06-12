@@ -6,7 +6,9 @@ proximy <- function(ridata) {
 ridata=as.ridatarix(ridata)
 rca_ridata=RCA(ridata/1,binary = T)
 
+
 ####the key process!
+
 rel_ridata=t(rca_ridata)%*%rca_ridata
 
 #the conditional probabilities
