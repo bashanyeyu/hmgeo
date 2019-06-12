@@ -1,12 +1,15 @@
-proximy <- function(ridata) {
+proximy.m <- function(ridata) {
 
 ###Just for proximy!!NOT density!
 # location in rows and industies in cloumns
 #in case of the error about "as.numic", add "/1"
+
 ridata=as.ridatarix(ridata)
 rca_ridata=RCA(ridata/1,binary = T)
 
+
 ####the key process!
+
 rel_ridata=t(rca_ridata)%*%rca_ridata
 
 #the conditional probabilities
@@ -31,3 +34,20 @@ rela_ridata[is.nan(rela_ridata)]=0
 rela_ridata=as.data.frame(rela_ridata)
 
 }
+
+proximy=function(ridata,location=r){
+  if(location=='r'){
+    result=proximy.m(ridata)
+  }else{
+
+    if(location=='c'){
+      ridata=t(ridata)
+      result=proximy.m(ridata)
+    }else{
+      print("location should be 'r'(in rows) or 'c'(in cols)")
+    }
+  }
+
+
+}
+
